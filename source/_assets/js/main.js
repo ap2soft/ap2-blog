@@ -4,6 +4,7 @@ window.Vue = require('vue');
 
 import Search from './components/Search.vue';
 import hljs from 'highlight.js/lib/highlight';
+import 'alpinejs';
 
 // Syntax highlighting
 hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'));
