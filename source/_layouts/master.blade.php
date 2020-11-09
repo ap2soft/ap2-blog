@@ -24,6 +24,8 @@
 
     @if ($page->production)
         @include('_partials.analytics.yandex')
+        <meta name="yandex-verification" content="865c277e68545812" />
+        <meta name="google-site-verification" content="wq6JDWrVWdMU43DLkZ-ZRK0GjyA34T__Ywv0oL2oE18" />
     @endif
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
