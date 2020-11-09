@@ -32,6 +32,11 @@ module.exports = {
           ...defaultTheme.fontFamily.mono,
         ],
       },
+      boxShadow: {
+        ...defaultTheme.boxShadow,
+        'outline-white': '0 0 0 3px rgba(255, 255, 255, .45)',
+        'lg': '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
+      },
       lineHeight: {
         normal: '1.6',
         loose: '1.75',

@@ -32,7 +32,25 @@
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 </head>
 
-<body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+<body class="relative flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+    <header id="top" class="absolute top-0 inset-x-0">
+        <div class="container">
+            <div class="flex justify-between items-center p-4">
+                <a href="/" class="w-16 h-16 block text-gray-400 hover:text-white focus:outline-none focus:text-white" title="{{ $page->siteName }}">
+                    @include('_partials.logo')
+                </a>
+
+                <div>
+                    {{-- Nav Menu: Desktop --}}
+                    <div class="flex justify-end items-center">
+                        <a href="#skills" class="text-gray-400 text-xl uppercase tracking-wider border-2 border-transparent px-4 py-2 hover:text-white hover:border-white focus:outline-none- focus:shadow-outline-white">Skills</a>
+                        <a href="#contacts" class="text-gray-400 text-xl uppercase tracking-wider border-2 border-transparent px-4 py-2 hover:text-white hover:border-white focus:outline-none- focus:shadow-outline-white">Contacts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <section class="min-h-screen text-gray-300 | bg-left bg-cover bg-no-repeat"
         style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/bg-laptop.jpg')">
         <div class="container px-12">
