@@ -33,6 +33,22 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+    <section class="min-h-screen text-gray-300 | bg-left bg-cover bg-no-repeat"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/bg-laptop.jpg')">
+        <div class="container px-12">
+            <div class="min-h-screen flex flex-col justify-center items-center">
+                <h1 class="text-4xl font-mono uppercase tracking-wide text-center | sm:text-5xl">Developer.</h1>
+
+                <div class="mt-4">
+                    <a href="#contacts"
+                        class="px-4 py-2 inline-block text-gray-400 uppercase font-semibold tracking-wider border-2 border-gray-400 hover:text-white hover:border-white focus:outline-none focus:shadow-outline">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
         <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
             <div class="flex items-center">
