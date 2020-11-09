@@ -28,4 +28,3 @@ new Vue({
         Search,
     },
 }).$mount('#vue-search');
-
