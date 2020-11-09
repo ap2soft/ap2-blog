@@ -1,3 +1,7 @@
 ::selection {
     @apply text-white bg-gray-700;
 }
+
+a, button {
+    @apply transition-colors duration-300 ease-in-out;
+}
