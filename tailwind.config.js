@@ -50,9 +50,6 @@ module.exports = {
         '7': '1.75rem',
         '9': '2.25rem'
       },
-      boxShadow: {
-        'lg': '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
-      }
     },
     fontSize: {
       'xs': '.8rem',
@@ -73,7 +70,7 @@ module.exports = {
     width: ['responsive', 'focus']
   },
   plugins: [
-    function({ addUtilities }) {
+    function ({ addUtilities }) {
       const newUtilities = {
         '.transition-fast': {
           transition: 'all .2s ease-out',
