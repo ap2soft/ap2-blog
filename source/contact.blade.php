@@ -1,70 +1,54 @@
 ---
 title: Contact
-description: Get in touch with us
+description: Get in touch with me
 ---
 @extends('_layouts.master')
 
 @section('body')
-<h1>Contact</h1>
+<section class="text-gray-400 pt-32 pb-16">
+    <div class="container flex flex-col items-center">
+        <h2 class="text-2xl uppercase border-b-4 border-red-500">Contacts</h2>
 
-<p class="mb-8">
-    Static sites are unable to handle form submissions. However, there are third-party services, like Tighten’s <a href="https://fieldgoal.io" title="FieldGoal">FieldGoal</a>, which can accept the form submission, email you the result, and redirect back to a thank you page.
-</p>
+        <div class="mt-6 max-w-lg w-full">
+            <h1 class="text-gray-500 font-semibold tracking-wide text-center">
+                Do you have a question
+                <br class="sm:hidden">
+                or want to work together?
+            </h1>
 
-<form action="/contact" class="mb-12">
-    <div class="flex flex-wrap mb-6 -mx-3">
-        <div class="w-full md:w-1/2 mb-6 md:mb-0 px-3">
-            <label class="block mb-2 text-gray-800 text-sm font-semibold" for="contact-name">
-                Name
-            </label>
+            <div class="mt-4"></div>
 
-            <input
-                type="text"
-                id="contact-name"
-                placeholder="Jane Doe"
-                name="name"
-                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
-                required
-            >
+            {{-- TODO: Form validation --}}
+            <form x-data="{ }" action="/contact" method="post" netlify>
+                <div class="flex flex-col justify-between space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0">
+                    <div class="flex-1">
+                        <label for="name" class="sr-only">What is your name?</label>
+                        <input type="text" name="name" id="name" placeholder="What is your name?" required="required"
+                            class="p-2 w-full text-white tracking-wide bg-transparent border-b border-gray-500 hover:border-white focus:text-white focus:outline-none focus:border-white">
+                    </div>
+
+                    <div class="flex-1">
+                        <label for="email" class="sr-only">Your email (so I could reply)</label>
+                        <input type="email" name="email" id="email" placeholder="Your email (so I could reply)"
+                            class="p-2 w-full text-white tracking-wide bg-transparent border-b border-gray-500 hover:border-white focus:outline-none focus:border-white">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="message" class="sr-only">What is your question?</label>
+                    <textarea name="message" id="message" placeholder="What is your question?" required="required"
+                        class="mt-4 p-2 w-full h-auto text-white border-b border-gray-500 tracking-wide bg-transparent hover:border-white focus:border-white focus:outline-none"
+                        style="max-height: 113px;"></textarea>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" aria-label="Send"
+                        class="px-4 py-2 | block w-full | text-gray-500 border border-gray-500 | hover:text-white hover:border-white | focus:outline-none focus:shadow-outline focus:text-white | sm:w-auto sm:mx-auto">
+                        Send
+                    </button>
+                </div>
+            </form>
         </div>
-
-        <div class="w-full px-3 md:w-1/2">
-            <label class="block text-gray-800 text-sm font-semibold mb-2" for="contact-email">
-                Email Address
-            </label>
-
-            <input
-                type="email"
-                id="contact-email"
-                placeholder="email@domain.com"
-                name="email"
-                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
-                required
-            >
-        </div>
     </div>
-
-    <div class="w-full mb-12">
-        <label class="block text-gray-800 text-sm font-semibold mb-2" for="contact-message">
-            Message
-        </label>
-
-        <textarea
-            id="contact-message"
-            rows="4"
-            name="message"
-            class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-3"
-            placeholder="A lovely message here."
-            required
-        ></textarea>
-    </div>
-
-    <div class="flex justify-end w-full">
-        <input
-            type="submit"
-            value="Submit"
-            class="block bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold leading-snug tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
-        >
-    </div>
-</form>
+</section>
 @stop
