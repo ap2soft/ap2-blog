@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   purge: {
     content: [
@@ -16,14 +18,25 @@ module.exports = {
     },
   },
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+    },
     extend: {
       fontFamily: {
         sans: [
-          'Nunito Sans'
+          '"Fira Sans Extra Condensed"',
+          ...defaultTheme.fontFamily.sans,
         ],
         mono: [
-          'monospace',
+          '"Space Mono"',
+          ...defaultTheme.fontFamily.mono,
         ],
+      },
+      boxShadow: {
+        ...defaultTheme.boxShadow,
+        'outline-white': '0 0 0 3px rgba(255, 255, 255, .45)',
+        'lg': '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
       },
       lineHeight: {
         normal: '1.6',
@@ -38,9 +51,6 @@ module.exports = {
         '7': '1.75rem',
         '9': '2.25rem'
       },
-      boxShadow: {
-        'lg': '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
-      }
     },
     fontSize: {
       'xs': '.8rem',
@@ -61,7 +71,7 @@ module.exports = {
     width: ['responsive', 'focus']
   },
   plugins: [
-    function({ addUtilities }) {
+    function ({ addUtilities }) {
       const newUtilities = {
         '.transition-fast': {
           transition: 'all .2s ease-out',

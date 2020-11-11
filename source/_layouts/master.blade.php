@@ -28,49 +28,19 @@
         <meta name="google-site-verification" content="wq6JDWrVWdMU43DLkZ-ZRK0GjyA34T__Ywv0oL2oE18" />
     @endif
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 </head>
 
-<body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
-    <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
-        <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
-            <div class="flex items-center">
-                <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
-                    <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
+<body class="relative flex flex-col justify-between min-h-screen bg-gray-800 text-gray-200 leading-normal font-sans">
 
-                    <h1 class="text-lg md:text-2xl text-blue-800 font-semibold hover:text-blue-600 my-0">{{ $page->siteName }}</h1>
-                </a>
-            </div>
+    @include('_partials.header')
 
-            <div id="vue-search" class="flex flex-1 justify-end items-center">
-                <search></search>
-
-                @include('_nav.menu')
-
-                @include('_nav.menu-toggle')
-            </div>
-        </div>
-    </header>
-
-    @include('_nav.menu-responsive')
-
-    <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
+    <main role="main">
         @yield('body')
     </main>
 
-    <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
-        <ul class="flex flex-col md:flex-row justify-center list-none">
-            <li class="md:mr-2">
-                &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
-            </li>
-
-            <li>
-                Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
-            </li>
-        </ul>
-    </footer>
+    @include('_partials.footer')
 
     <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
 
