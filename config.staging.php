@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'http://jigsaw-blog-staging.tighten.co',
+    'baseUrl' => 'https://ap2.netlify.app/',
     'production' => false,
 ];
