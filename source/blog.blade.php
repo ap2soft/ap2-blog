@@ -8,7 +8,7 @@ pagination:
 @extends('_layouts.master')
 
 @section('body')
-<div class="mt-32 container">
+<div class="mt-32 container pb-10">
     <h1 class="text-3xl font-serif font-semibold">{{ $page->title }}</h1>
     <p class="text-gray-500">{{ $page->description }}</p>
 
