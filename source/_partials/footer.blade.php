@@ -35,11 +35,11 @@
 
         <p class="mt-2">
             Built with
-            <a href="http://jigsaw.tighten.co" class="border-b border-gray-500 hover:text-whtie hover:border-white" title="Jigsaw by Tighten">
+            <a href="http://jigsaw.tighten.co" class="border-b border-gray-500 hover:text-white hover:border-white" title="Jigsaw by Tighten">
                 Jigsaw
             </a>
             and
-            <a href="https://tailwindcss.com" class="border-b border-gray-500 hover:text-whtie hover:border-white" title="Tailwind CSS, a utility-first CSS framework">
+            <a href="https://tailwindcss.com" class="border-b border-gray-500 hover:text-white hover:border-white" title="Tailwind CSS, a utility-first CSS framework">
                 Tailwind CSS
             </a>.
         </p>
