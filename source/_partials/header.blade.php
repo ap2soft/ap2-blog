@@ -1,4 +1,4 @@
-<header id="top" class="absolute top-0 inset-x-0">
+<header id="top" class="absolute z-10 top-0 inset-x-0 {{ $classes ?? '' }}">
     <div class="container">
         <div class="flex justify-between items-center p-4">
             <a href="/" class="w-16 h-16 block text-gray-400 hover:text-white focus:outline-none focus:text-white" title="{{ $page->siteName }}">

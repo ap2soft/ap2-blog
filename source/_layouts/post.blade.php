@@ -5,6 +5,8 @@ $page->type = 'article';
 @endphp
 
 @section('body')
+    @include('_partials.header', ['classes' => 'bg-gray-800 bg-opacity-25'])
+
 <div class="relative" style="padding-bottom: 33%">
     @if ($page->cover_image)
     <img src="{{ $page->cover_image }}" alt="{{ $page->title }}" class="absolute w-full h-full object-cover">
