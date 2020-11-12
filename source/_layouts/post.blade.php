@@ -15,7 +15,7 @@ $page->type = 'article';
     @endif
 </div>
 
-<div class="container py-6">
+<div class="container py-6 max-w-3xl">
     <h1 class="text-5xl font-serif font-semibold">{{ $page->title }}</h1>
 
     <p class="text-gray-600 text-xl md:mt-0">{{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
@@ -31,7 +31,7 @@ $page->type = 'article';
         </div>
     @endif
 
-    <div class="mt-8 border-b border-blue-200 pb-8 prose">
+    <div class="mt-8 border-b border-blue-200 pb-8 prose prose-xl">
         @yield('content')
     </div>
 
