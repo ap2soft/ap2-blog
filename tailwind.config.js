@@ -68,6 +68,38 @@ module.exports = {
       '5xl': '2.625rem',
       '6xl': '10rem',
     },
+
+    typography: (theme) => ({
+      default: {
+        css: {
+          color: theme('colors.gray.300'),
+          a: {
+            color: theme('colors.indigo.200'),
+            '&:hover': {
+              color: theme('colors.indigo.500'),
+            }
+          },
+          'h1, h2, h3, h4': {
+            color: theme('colors.gray.200')
+          },
+          code: {
+            color: theme('colors.indigo.200'),
+            fontWeight: theme('fontWeight.medium'),
+            backgroundColor: theme('colors.gray.700'),
+            borderRadius: theme('borderRadius.default'),
+            '&:before, &:after': {
+              color: theme('colors.indigo.400'),
+            }
+          },
+          pre: {
+            fontFamily: theme('fontFamily.mono'),
+            borderColor: theme('colors.gray.500'),
+            borderWidth: theme('spacing.px'),
+            whiteSpace: 'pre-wrap',
+          }
+        },
+      }
+    })
   },
   variants: {
     borderRadius: ['responsive', 'focus'],
@@ -85,6 +117,7 @@ module.exports = {
         },
       }
       addUtilities(newUtilities)
-    }
+    },
+    require('@tailwindcss/typography'),
   ]
 }

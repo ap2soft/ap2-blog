@@ -2,49 +2,37 @@
 title: Blog
 description: The list of blog posts for the site
 pagination:
-    collection: posts
-    perPage: 4
+  collection: posts
+  perPage: 4
 ---
 @extends('_layouts.master')
 
 @section('body')
-    <h1>Blog</h1>
+<div class="mt-32 container">
+    <h1 class="text-3xl font-serif font-semibold">{{ $page->title }}</h1>
+    <p class="text-gray-500">{{ $page->description }}</p>
 
-    <hr class="border-b my-6">
-
-    @foreach ($pagination->items as $post)
-        @include('_components.post-preview-inline')
-
-        @if ($post != $pagination->items->last())
-            <hr class="border-b my-6">
-        @endif
-    @endforeach
+    <div class="mt-8 space-y-6">
+        @foreach ($pagination->items as $post)
+            @include('_components.post-preview-inline')
+        @endforeach
+    </div>
 
     @if ($pagination->pages->count() > 1)
-        <nav class="flex text-base my-8">
+        <nav class="my-8 flex text-base space-x-3">
             @if ($previous = $pagination->previous)
-                <a
-                    href="{{ $previous }}"
-                    title="Previous Page"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3"
-                >&LeftArrow;</a>
+                <a href="{{ $previous }}" title="Previous Page" class="border border-gray-300 rounded px-5 py-3 hover:text-gray-300 hover:bg-gray-700">&LeftArrow;</a>
             @endif
 
             @foreach ($pagination->pages as $pageNumber => $path)
-                <a
-                    href="{{ $path }}"
-                    title="Go to Page {{ $pageNumber }}"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-blue-600' : 'text-blue-700' }}"
-                >{{ $pageNumber }}</a>
+                <a href="{{ $path }}" title="Go to Page {{ $pageNumber }}"
+                    class="{{ $pagination->currentPage == $pageNumber ? 'text-gray-400 bg-gray-700' : 'text-gray-600' }} border border-gray-300 rounded px-5 py-3 hover:text-gray-300 hover:bg-gray-700">{{ $pageNumber }}</a>
             @endforeach
 
             @if ($next = $pagination->next)
-                <a
-                    href="{{ $next }}"
-                    title="Next Page"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3"
-                >&RightArrow;</a>
+                <a href="{{ $next }}" title="Next Page" class="border border-gray-300 rounded px-5 py-3 hover:text-gray-300 hover:bg-gray-700">&RightArrow;</a>
             @endif
         </nav>
     @endif
+</div>
 @stop

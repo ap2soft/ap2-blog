@@ -48,6 +48,11 @@
                                     x-on:click="show = false">
                                     Contacts
                                 </a>
+                                <a href="/blog"
+                                    class="inline-block | border-b-2 border-transparent px-4 py-2 | hover:text-gray-900 hover:border-gray-700 | focus:outline-none focus:shadow-outline"
+                                    x-on:click="show = false">
+                                    Blog
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -66,6 +71,10 @@
                     <a href="/#contact"
                         class="text-gray-400 text-xl uppercase tracking-wider border-2 border-transparent px-4 py-2 hover:text-white hover:border-white focus:outline-none- focus:shadow-outline-white">
                         Contacts
+                    </a>
+                    <a href="/blog"
+                        class="text-gray-400 text-xl uppercase tracking-wider border-2 border-transparent px-4 py-2 hover:text-white hover:border-white focus:outline-none- focus:shadow-outline-white">
+                        Blog
                     </a>
                 </div>
             </div>
