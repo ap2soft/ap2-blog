@@ -16,4 +16,7 @@
         </div>
     </div>
 </section>
+
+@include('_partials.sections.skills')
+
 @stop

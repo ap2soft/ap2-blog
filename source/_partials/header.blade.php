@@ -21,7 +21,7 @@
                         class="text-gray-400 text-xl uppercase tracking-wider border-2 border-transparent px-4 py-2 hover:text-white hover:border-white focus:outline-none- focus:shadow-outline-white">
                         Skills
                     </a>
-                    <a href="/contact"
+                    <a href="/#contact"
                         class="text-gray-400 text-xl uppercase tracking-wider border-2 border-transparent px-4 py-2 hover:text-white hover:border-white focus:outline-none- focus:shadow-outline-white">
                         Contacts
                     </a>
