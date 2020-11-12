@@ -17,6 +17,8 @@
     </div>
 </section>
 
+@include('_partials.sections.skills')
+
 @include('_partials.sections.contact')
 
 @stop
