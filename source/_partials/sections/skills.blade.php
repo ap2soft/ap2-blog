@@ -2,15 +2,15 @@
     <div class="container flex flex-col items-center">
         <h2 class="text-2xl uppercase border-b-4 border-red-500">Skills</h2>
 
-        <div class="mt-8 w-full space-y-12">
+        <div class="mt-8 max-w-xl w-full space-y-12">
 
             {{-- PHP --}}
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col justify-center items-center sm:flex-row">
                 <div class="w-20 flex-shrink-0">
                     @include('_svg.php')
                 </div>
 
-                <div class="mt-4 space-y-2">
+                <div class="mt-4 space-y-2 sm:mt-0 sm:mx-12 sm:pr-20">
                     <div class="text-center">
                         <h3 class="text-xl font-semibold tracking-wider">PHP</h3>
                         <p class="text-lg">
@@ -28,12 +28,12 @@
             </div>
 
             {{-- JS --}}
-            <div class="flex flex-col items-center">
-                <div class="w-20 h-20 flex-shrink-0">
+            <div class="flex flex-col justify-center items-center sm:flex-row-reverse">
+                <div class="w-20 flex-shrink-0">
                     @include('_svg.javascript')
                 </div>
 
-                <div class="mt-4 space-y-2">
+                <div class="mt-4 space-y-2 sm:mt-0 sm:mx-12 sm:pl-20">
                     <div class="text-center">
                         <h3 class="text-xl font-semibold tracking-wider">Javascript</h3>
                         <p class="text-lg">
@@ -51,12 +51,12 @@
             </div>
 
             {{-- CSS --}}
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col justify-center items-center sm:flex-row">
                 <div class="w-20 h-20 flex-shrink-0">
                     @include('_svg.css')
                 </div>
 
-                <div class="mt-4 space-y-2">
+                <div class="mt-4 space-y-2 sm:mt-0 sm:mx-12 sm:pr-20">
                     <div class="text-center">
                         <h3 class="text-xl font-semibold tracking-wider">CSS</h3>
                         <p class="text-lg">
@@ -74,12 +74,12 @@
             </div>
 
             {{-- DB --}}
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col justify-center items-center sm:flex-row-reverse">
                 <div class="w-20 h-20 flex-shrink-0">
                     @include('_svg.sql')
                 </div>
 
-                <div class="mt-4 space-y-2">
+                <div class="mt-4 space-y-2 sm:mt-0 sm:mx-12 sm:pl-20">
                     <div class="text-center">
                         <h3 class="text-xl font-semibold tracking-wider">Databases</h3>
                         <p class="text-lg">
@@ -99,12 +99,12 @@
             </div>
 
             {{-- HTML --}}
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col justify-center items-center sm:flex-row">
                 <div class="w-20 h-20 flex-shrink-0">
                     @include('_svg.html')
                 </div>
 
-                <div class="mt-4 space-y-2">
+                <div class="mt-4 space-y-2 sm:mt-0 sm:mx-12 sm:pr-20">
                     <div class="text-center">
                         <h3 class="text-xl font-semibold tracking-wider">HTML</h3>
                         <p class="text-lg">
