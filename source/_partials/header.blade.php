@@ -13,7 +13,7 @@
                             ? document.body.classList.add('overflow-hidden')
                             : document.body.classList.remove('overflow-hidden')
                     )
-                    " class="block sm:hidden">
+                    " x-cloak class="block sm:hidden">
                     <button x-on:click="show = true"
                         class="w-10 h-10 fill-current text-gray-400 hover:text-white focus:outline-none focus:shadow-outline">
                         @include('_svg.hamburger')

@@ -28,6 +28,9 @@
         <meta name="google-site-verification" content="wq6JDWrVWdMU43DLkZ-ZRK0GjyA34T__Ywv0oL2oE18" />
     @endif
 
+    <style>
+        [x-cloak] { display: none; }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 </head>
